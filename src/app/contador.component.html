@@ -1,0 +1,15 @@
+<h1>{{ title }}</h1>
+<h2>{{ numero }}</h2>
+<p>la variable es {{ base }}</p>
+<!-- <button (click)="numero = numero + 1">+1</button>
+<span> {{ numero }} </span>
+<button (click)="numero = numero - 1">-1</button>  se hace la funcion en el ts del mismo componente -->
+<!-- funciones separadas -->
+<!-- <button (click)="sumar()">+1</button>
+<span> {{ numero }} </span>
+<button (click)="resta()">-1</button> -->
+<!-- funcion acumular -->
+
+<button (click)="acumular(base)">+1</button>
+<span> {{ numero }} </span>
+<button (click)="acumular(-base)">-1</button>
