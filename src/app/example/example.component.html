@@ -1,0 +1,36 @@
+<p>example works!</p>
+<!-- <input type="text" [(ngModel)]="title" /> -->
+<input type="text" [(ngModel)]="title" (keydown.enter)="addItem(title)" />
+<!-- le agrego funcionalida al imut de al dar click añada -->
+{{ title }}
+<button (click)="addItem(title)">ADD</button>
+
+<!-- llamo a mi variable creada en ts a esa le paso ngModel que lo que hace es recibir un valor por el imput igualarlo a mi variable de ts e imprimirlo con el mismo nombre imprime lo que se escribe en el imput  -->
+
+<ul>
+  <li *ngFor="let task of taskList; index as i">
+    {{ task }} {{ i }}
+    <button (click)="deleteItem(i)">Delete</button>
+  </li>
+</ul>
+
+<!-- recorro el array de la lista creada en ts  -->
+
+<input type="text" [(ngModel)]="title2" />
+{{ title2 }}
+
+<!-- ng for -->
+<div *ngIf="title2 === 'Perro'">Labrador</div>
+
+<div *ngIf="title2 === 'gato'">Michin</div>
+
+<div *ngIf="title2 === 'cocodrilo'">Croc</div>
+<div *ngIf="title2 === 'manzana'">manzana</div>
+
+<!-- ng swith -->
+
+<div [ngSwitch]="title2">
+  <p *ngSwitchCase="'aguila'">Soy un aguila</p>
+  <p *ngSwitchCase="'tiburon'">Soy un tiburon</p>
+  <p *ngSwitchCase="'buho'">Soy un buho</p>
+</div>
